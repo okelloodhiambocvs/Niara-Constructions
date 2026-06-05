@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-cursive: "Alex Brush", cursive;
+  
+  --color-brand-primary: #0B1E1D; /* Deep Spruce/Teal Abyss */
+  --color-brand-accent: #118A7E; /* Niara Royal Teal - matching logo text */
+  --color-brand-secondary: #4A5F5D; /* Clean Muted Steel-Teal for text */
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans text-brand-secondary bg-white overflow-x-hidden dark:bg-slate-950 dark:text-slate-300 transition-colors duration-300;
+  }
+}
+
+.heading-xl {
+  @apply font-display text-5xl md:text-7xl font-bold tracking-tighter text-brand-primary dark:text-white leading-[1.1] transition-colors duration-300;
+}
+
+.heading-lg {
+  @apply font-display text-3xl md:text-5xl font-semibold tracking-tight text-brand-primary dark:text-white transition-colors duration-300;
+}
+
+.heading-md {
+  @apply font-display text-2xl md:text-3xl font-semibold text-brand-primary dark:text-white transition-colors duration-300;
+}
+
+.section-padding {
+  @apply py-20 px-6 md:px-12 lg:py-32;
+}
+
+.container-custom {
+  @apply max-w-7xl mx-auto w-full;
+}
+
+.btn-primary {
+  @apply px-8 py-4 bg-brand-primary text-white font-medium hover:bg-black transition-all duration-300 inline-flex items-center gap-2 dark:bg-brand-accent dark:text-brand-primary dark:hover:bg-white;
+}
+
+.btn-outline {
+  @apply px-8 py-4 border border-brand-primary text-brand-primary font-medium hover:bg-brand-primary hover:text-white transition-all duration-300 inline-flex items-center gap-2 dark:border-brand-accent dark:text-brand-accent dark:hover:bg-brand-accent dark:hover:text-white;
+}
+
+/* ==========================================
+   INTERACTIVE ACCESSIBILITY OVERRIDES
+   ========================================== */
+
+/* High-contrast compliance rules for extreme readability */
+html.accessibility-high-contrast,
+html.accessibility-high-contrast body {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+html.accessibility-high-contrast.dark,
+html.accessibility-high-contrast.dark body {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+html.accessibility-high-contrast p,
+html.accessibility-high-contrast h1,
+html.accessibility-high-contrast h2,
+html.accessibility-high-contrast h3,
+html.accessibility-high-contrast h4,
+html.accessibility-high-contrast h5,
+html.accessibility-high-contrast h6,
+html.accessibility-high-contrast span,
+html.accessibility-high-contrast li,
+html.accessibility-high-contrast label,
+html.accessibility-high-contrast select,
+html.accessibility-high-contrast input,
+html.accessibility-high-contrast textarea,
+html.accessibility-high-contrast button,
+html.accessibility-high-contrast svg {
+  color: currentColor !important;
+  text-shadow: none !important;
+}
+
+html.accessibility-high-contrast a {
+  text-decoration: underline !important;
+  font-weight: bold !important;
+}
+
+html.accessibility-high-contrast .border,
+html.accessibility-high-contrast [class*="border-"] {
+  border-width: 2px !important;
+  border-color: currentColor !important;
+}
+
+html.accessibility-high-contrast bg-white,
+html.accessibility-high-contrast .bg-slate-50,
+html.accessibility-high-contrast .bg-slate-100,
+html.accessibility-high-contrast .bg-slate-900,
+html.accessibility-high-contrast .bg-slate-950,
+html.accessibility-high-contrast .bg-brand-primary,
+html.accessibility-high-contrast .bg-brand-secondary,
+html.accessibility-high-contrast .bg-zinc-900,
+html.accessibility-high-contrast .bg-white\/5 {
+  background-color: transparent !important;
+  border: 1px solid currentColor !important;
+}
+
+html.accessibility-high-contrast input,
+html.accessibility-high-contrast select,
+html.accessibility-high-contrast textarea,
+html.accessibility-high-contrast button {
+  background-color: transparent !important;
+  border: 2px solid currentColor !important;
+  outline: 2px solid transparent !important;
+}
+

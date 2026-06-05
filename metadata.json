@@ -1,0 +1,8 @@
+{
+  "name": "Niara Construction",
+  "description": "Premium construction and design-build services in Kenya, specializing in residential and commercial excellence.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": []
+}
