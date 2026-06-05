@@ -1,175 +1,188 @@
-Niara Constructions
+# Niara Constructions
 
-Overview
+Niara Constructions is a modern web application showcasing construction and design-build services, built with a focus on performance, responsiveness, and clean user experience.
 
-Niara Constructions is a modern construction and design-build web application built using React, TypeScript, and Vite. It is designed to showcase construction services, portfolio projects, company milestones, and client engagement features for a professional construction firm operating in Kenya.
-
-The application focuses on performance, modular UI architecture, and scalability, with reusable components and a clean frontend structure that can be extended into a full-stack system.
+The project is built as a single-page application using a component-driven architecture, making it easy to scale, maintain, and extend.
 
 ---
 
-Tech Stack
+## Project Overview
+
+This application presents a professional digital presence for a construction company, including:
+
+* Company overview and services
+* Project portfolio showcase
+* Client testimonials
+* Contact and inquiry system
+* Cost estimation tool
+* Careers and hiring section
+* Interactive UI components
+
+The design is optimized for both desktop and mobile experiences.
+
+---
+
+## Tech Stack
 
 Frontend:
 
-* React (with TypeScript)
-* Vite (build tool and dev server)
-* CSS (custom styling and utility-based structure)
-* Framer Motion (animations)
-* Lucide React (icons)
+* React (TypeScript)
+* Vite (build tool)
+* Tailwind CSS (styling)
+* Framer Motion / Motion (animations)
 
-State & UI Architecture:
+State & Utilities:
 
-* React Context API (Theme, Language, UI state)
-* Component-based architecture
+* React Context API
+* Environment variables (.env support)
 
 Build Tooling:
 
 * Vite
 * TypeScript
-* ESLint (type checking via tsc)
+* ESLint (type checking)
 
 ---
 
-Project Structure
+## Project Structure
 
 src/
-components/
-About.tsx
-Careers.tsx
-Contact.tsx
-CostEstimator.tsx
-CTA.tsx
-FAQ.tsx
-Footer.tsx
-Hero.tsx
-LanguageContext.tsx
-Logo.tsx
-Milestones.tsx
-Navbar.tsx
-Portfolio.tsx
-Process.tsx
-SearchModal.tsx
-Services.tsx
-Testimonials.tsx
-ThemeContext.tsx
-Toast.tsx
-WhatsAppButton.tsx
-WhyChoose.tsx
-
-components/portfolio/
-ImageComparison.tsx
-ProjectTimeline.tsx
-SustainabilityMetrics.tsx
-ThreeDViewer.tsx
-
-App.tsx
-main.tsx
-index.css
+├── components/
+│   ├── portfolio/        # Advanced visual components (3D, timeline, metrics)
+│   ├── Navbar.tsx        # Main navigation
+│   ├── Hero.tsx          # Landing section
+│   ├── Services.tsx     # Services overview
+│   ├── Portfolio.tsx    # Project showcase
+│   ├── Testimonials.tsx # Client feedback
+│   ├── Contact.tsx      # Contact form
+│   ├── Footer.tsx       # Footer section
+│   └── shared UI modules
+│
+├── App.tsx              # Application root
+├── main.tsx             # Entry point
+└── index.css            # Global styles
 
 ---
 
-Installation & Setup
+## Installation
 
-1. Clone the repository
+### 1. Clone the repository
 
 git clone https://github.com/okelloodhiambocvs/Niara-Constructions.git
 
-2. Navigate into the project
-
-cd Niara-Constructions
-
-3. Install dependencies
+### 2. Install dependencies
 
 npm install
 
-4. Start development server
+### 3. Run development server
 
 npm run dev
 
-The application will run at:
+The app will run on:
 http://localhost:3000
 
 ---
 
-Build for Production
+## Build for Production
 
-To generate a production-ready build:
+To generate a production build:
 
 npm run build
 
-The output will be generated in the dist/ folder.
+The output will be generated in:
 
----
+dist/
 
-Preview Production Build
+To preview production build locally:
 
 npm run preview
 
-This allows you to test the production build locally before deployment.
+---
+
+## Environment Variables
+
+Create a `.env` file in the root directory:
+
+GEMINI_API_KEY=your_api_key_here
+
+APP_URL=http://localhost:3000
+
+Note: Environment variables are required only for AI-assisted or dynamic features.
 
 ---
 
-Code Quality Check
+## Code Quality & Type Checking
 
 Run TypeScript validation:
 
 npm run lint
 
-This ensures there are no type errors before deployment.
-
 ---
 
-Environment Variables
+## Testing Strategy
 
-Create a .env file if backend or API integration is added:
+Currently, the project does not include automated unit tests, but follows manual validation steps:
 
-GEMINI_API_KEY=your_key_here
-APP_URL=http://localhost:3000
+### Manual UI Testing
 
----
+* Verify homepage renders correctly
+* Check navigation between sections
+* Validate responsive behavior on mobile
+* Test contact form interactions
+* Ensure animations load smoothly
 
-Deployment (Railway)
+### Build Verification
 
-This project is compatible with Railway deployment.
+Always run before deployment:
 
-Build command:
 npm run build
-
-Start command:
-npm run preview
 
 Ensure:
 
-* dist/ is generated
-* Node version >= 18
+* No build errors
+* dist/ folder is generated
+* Assets load correctly
 
 ---
 
-Future Improvements
+## Deployment (Railway)
 
-* Backend API integration (Node.js / Express)
-* Database layer (PostgreSQL or MongoDB)
-* Admin dashboard for project management
-* CMS integration for portfolio updates
-* Image optimization and lazy loading
-* SEO optimization and meta tagging
+This project is deployment-ready for Railway or any static hosting platform.
 
----
+Steps:
 
-Testing Checklist
+1. Run production build:
+   npm run build
 
-Before deployment, ensure:
+2. Deploy `dist/` folder as static site
 
-* Application loads without console errors
-* Navigation between sections works
-* Responsive layout tested on mobile and desktop
-* Build completes successfully (npm run build)
-* Preview works correctly (npm run preview)
-* No TypeScript errors (npm run lint)
+3. Ensure:
+
+   * index.html is entry point
+   * assets are correctly referenced
 
 ---
 
-Notes
+## Performance Notes
 
-This project was originally generated using AI-assisted tooling and has been structured into a production-ready frontend architecture suitable for deployment and future scaling.
+* Large bundle size warning is expected due to animation libraries
+* Can be optimized using code splitting in future iterations
+* Images and assets should be compressed for production
+
+---
+
+## Future Improvements
+
+* Add backend API (Node.js/Express or NestJS)
+* Add database integration (PostgreSQL or MongoDB)
+* Implement automated testing (Jest / Playwright)
+* Improve code splitting for performance
+* Add CI/CD pipeline
+
+---
+
+## Author
+
+Niara Constructions Web Platform
+
+Built as a production-ready frontend system for scalable deployment.
