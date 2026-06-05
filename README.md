@@ -2,7 +2,7 @@
 
 Niara Constructions is a modern web application showcasing construction and design-build services, built with a focus on performance, responsiveness, and clean user experience.
 
-The project is built as a single-page application using a component-driven architecture, making it easy to scale, maintain, and extend.
+The project is built as a single-page application using a component-driven architecture, making it easy to scale, maintain, and extend. The app runs on niara-constructions-production.up.railway.app
 
 ---
 
